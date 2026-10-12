@@ -1,4 +1,4 @@
-package com.example.yukilearnlite;
+package com.yukilearn.lite;
 
 import org.junit.Test;
 
