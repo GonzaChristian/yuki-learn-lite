@@ -5,4 +5,16 @@
     <string name="splash_motivation">Pequeños pasos, grandes resultados.</string>
     <string name="splash_loading">Cargando...</string>
     <string name="splash_yuki_description">Yuki, acompañante de aprendizaje</string>
+
+
+    <string name="profile_yuki_greeting">¡Hola! Soy Yuki</string>
+    <string name="profile_welcome">¡Bienvenido!</string>
+    <string name="profile_description">Antes de comenzar, cuéntame ¿cómo te gustaría que te llame?</string>
+    <string name="profile_name_label">Tu nombre</string>
+    <string name="profile_name_hint">Escribe tu nombre aquí...</string>
+    <string name="profile_start">Comenzar</string>
+    <string name="profile_local_info">Tu progreso se guardará en este dispositivo.</string>
+    <string name="profile_name_error">Ingresa tu nombre para continuar.</string>
+    <string name="profile_save_error">No se pudo guardar el perfil.</string>
+
 </resources>
