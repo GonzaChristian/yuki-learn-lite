@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yuki_primary">#7C86F2</color>
+    <color name="yuki_primary_dark">#5B67D8</color>
+    <color name="yuki_on_primary">#121426</color>
+    <color name="yuki_secondary">#2E3358</color>
+
+    <color name="yuki_background">#121426</color>
+    <color name="yuki_surface">#1E2238</color>
+
+    <color name="yuki_accent">#F5B942</color>
+    <color name="yuki_success">#4CAF78</color>
+    <color name="yuki_error">#EF4444</color>
+
+    <color name="yuki_text_primary">#F4F6FF</color>
+    <color name="yuki_text_secondary">#A7ACC7</color>
+</resources>
