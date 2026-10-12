@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Espaciados -->
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_normal">12dp</dimen>
+    <dimen name="space_large">16dp</dimen>
+
+    <!-- Márgenes -->
+    <dimen name="screen_margin">16dp</dimen>
+
+    <!-- Bordes -->
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="button_radius">14dp</dimen>
+
+    <!-- Botones -->
+    <dimen name="button_height">52dp</dimen>
+
+    <!-- Iconos -->
+    <dimen name="icon_size">24dp</dimen>
+
+    <!-- Personajes -->
+    <dimen name="yuki_small">80dp</dimen>
+    <dimen name="yuki_large">140dp</dimen>
+    <dimen name="luna_large">150dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_section">18sp</dimen>
+    <dimen name="text_card">16sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_secondary">12sp</dimen>
+
+</resources>

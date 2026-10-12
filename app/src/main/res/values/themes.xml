@@ -1,9 +1,25 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.YukiLearnLite" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+
+    <style name="Base.Theme.YukiLearnLite"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/yuki_primary</item>
+        <item name="colorOnPrimary">@color/yuki_on_primary</item>
+
+        <item name="colorSecondary">@color/yuki_secondary</item>
+        <item name="colorOnSecondary">@color/yuki_text_primary</item>
+
+        <item name="colorSurface">@color/yuki_surface</item>
+        <item name="colorOnSurface">@color/yuki_text_primary</item>
+
+        <item name="android:colorBackground">@color/yuki_background</item>
+        <item name="colorOnBackground">@color/yuki_text_primary</item>
+
+        <item name="colorError">@color/yuki_error</item>
+
     </style>
 
-    <style name="Theme.YukiLearnLite" parent="Base.Theme.YukiLearnLite" />
+    <style name="Theme.YukiLearnLite"
+        parent="Base.Theme.YukiLearnLite" />
+
 </resources>
