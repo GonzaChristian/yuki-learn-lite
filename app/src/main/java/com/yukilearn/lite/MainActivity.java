@@ -111,13 +111,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         btnProgress.setOnClickListener(v -> {
-            Toast.makeText(
-                    this,
-                    R.string.main_pending_progress,
-                    Toast.LENGTH_SHORT
-            ).show();
+
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    ProgressActivity.class
+            );
+
+            startActivity(intent);
         });
+
     }
 
     @Override

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@color/yuki_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_margin">
+
+        <!-- Encabezado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBackProgress"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back_yuki"
+                android:contentDescription="@string/units_back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progress_title"
+                    android:textColor="@color/yuki_text_primary"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progress_subtitle"
+                    android:textColor="@color/yuki_text_secondary"
+                    android:textSize="@dimen/text_body" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Nivel y XP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_main_hero"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large">
+
+            <TextView
+                android:id="@+id/txtProgressLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/main_level_preview"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_normal"
+                android:text="@string/progress_experience"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/txtProgressXp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_primary"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/barProgressXp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/space_large"
+                android:max="100"
+                android:progressTint="@color/yuki_primary"
+                android:progressBackgroundTint="@color/yuki_surface" />
+
+            <TextView
+                android:id="@+id/txtProgressNextLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_secondary" />
+
+        </LinearLayout>
+
+        <!-- Resumen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_profile_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_large">
+
+                <TextView
+                    android:id="@+id/txtLessonsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yuki_primary"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:text="@string/progress_lessons"
+                    android:textColor="@color/yuki_text_secondary"
+                    android:textSize="@dimen/text_body" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal"
+                android:layout_weight="1"
+                android:background="@drawable/bg_profile_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_large">
+
+                <TextView
+                    android:id="@+id/txtStarsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:text="@string/progress_stars"
+                    android:textColor="@color/yuki_text_secondary"
+                    android:textSize="@dimen/text_body" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Unidades -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/progress_units_heading"
+            android:textColor="@color/yuki_text_primary"
+            android:textSize="@dimen/text_section"
+            android:textStyle="bold" />
+
+        <!-- Unidad 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:background="@drawable/bg_profile_card"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/units_unit1"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_card"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUnit1Progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <ProgressBar
+                android:id="@+id/barUnit1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/space_normal"
+                android:max="100"
+                android:progressTint="@color/yuki_primary"
+                android:progressBackgroundTint="@color/yuki_secondary" />
+
+        </LinearLayout>
+
+        <!-- Unidad 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal"
+            android:background="@drawable/bg_profile_card"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/units_unit2"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_card"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUnit2Progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <ProgressBar
+                android:id="@+id/barUnit2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/space_normal"
+                android:max="100"
+                android:progressTint="@color/yuki_primary"
+                android:progressBackgroundTint="@color/yuki_secondary" />
+
+        </LinearLayout>
+
+        <!-- Unidad 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal"
+            android:background="@drawable/bg_profile_card"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/units_unit3"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_card"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUnit3Progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <ProgressBar
+                android:id="@+id/barUnit3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/space_normal"
+                android:max="100"
+                android:progressTint="@color/yuki_primary"
+                android:progressBackgroundTint="@color/yuki_secondary" />
+
+        </LinearLayout>
+
+        <!-- Desafío de Luna -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_marginBottom="@dimen/space_large"
+            android:background="@drawable/bg_main_hero"
+            android:orientation="vertical"
+            android:padding="@dimen/space_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/main_challenge_title"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtChallengeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_text_primary"
+                android:textSize="@dimen/text_card" />
+
+            <TextView
+                android:id="@+id/txtChallengeDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:text="@string/progress_challenge_hint"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

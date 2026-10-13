@@ -43,6 +43,11 @@
 
 
         <activity
+            android:name=".ProgressActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
 

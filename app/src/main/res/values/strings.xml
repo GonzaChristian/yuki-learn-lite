@@ -120,4 +120,28 @@
     <string name="result_repeat">Repetir práctica</string>
     <string name="result_save_error">No se pudo guardar el resultado. Inténtalo nuevamente.</string>
 
+
+    <!-- Pantalla Mi progreso -->
+    <string name="progress_title">Mi progreso</string>
+    <string name="progress_subtitle">Mira cuánto has avanzado</string>
+    <string name="progress_experience">Tu experiencia</string>
+
+    <string name="progress_level">Nivel %1$d de 5</string>
+    <string name="progress_total_xp">%1$d / 400 XP</string>
+    <string name="progress_next_level">%1$d XP para el siguiente nivel</string>
+    <string name="progress_max_level">¡Alcanzaste el nivel máximo!</string>
+
+    <string name="progress_lessons">Lecciones</string>
+    <string name="progress_stars">Estrellas</string>
+    <string name="progress_lessons_count">%1$d / 6</string>
+    <string name="progress_stars_count">%1$d / 18</string>
+
+    <string name="progress_units_heading">Avance por unidades</string>
+    <string name="progress_unit_count">%1$d de 2 lecciones · %2$d%%</string>
+
+    <string name="progress_challenge_locked">Bloqueado</string>
+    <string name="progress_challenge_available">Disponible</string>
+    <string name="progress_challenge_completed">¡Desafío superado!</string>
+    <string name="progress_challenge_hint">Completa las seis lecciones para desbloquearlo.</string>
+
 </resources>
