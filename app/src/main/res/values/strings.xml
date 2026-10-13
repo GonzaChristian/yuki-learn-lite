@@ -47,4 +47,22 @@
     <string name="main_pending_route">La ruta de aprendizaje estará disponible próximamente.</string>
     <string name="main_pending_progress">La pantalla de progreso estará disponible próximamente.</string>
 
+
+    <!-- Ruta de aprendizaje -->
+    <string name="units_title">Aprender</string>
+    <string name="units_subtitle">Tu camino de aprendizaje</string>
+    <string name="units_back">Volver al inicio</string>
+
+    <string name="units_unit1">UNIDAD 1 · Primeros pasos</string>
+    <string name="units_unit2">UNIDAD 2 · Variables y datos</string>
+    <string name="units_unit3">UNIDAD 3 · Operaciones y decisiones</string>
+
+    <string name="units_locked_message">Completa primero la lección anterior.</string>
+    <string name="units_lesson_pending">La lección estará disponible en la siguiente fase.</string>
+    <string name="units_challenge_pending">El Desafío de Luna estará disponible próximamente.</string>
+
+    <string name="units_challenge_locked">Bloqueado</string>
+    <string name="units_challenge_available">Disponible</string>
+    <string name="units_challenge_completed">Superado</string>
+
 </resources>

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.content.Intent;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -70,22 +70,29 @@ public class MainActivity extends AppCompatActivity {
         btnLearn = findViewById(R.id.btnLearn);
         btnProgress = findViewById(R.id.btnProgress);
 
-        // Navegación temporal hasta crear las siguientes Activities
+
         btnContinue.setOnClickListener(v -> {
-            Toast.makeText(
-                    this,
-                    R.string.main_pending_route,
-                    Toast.LENGTH_SHORT
-            ).show();
+
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    UnitsActivity.class
+            );
+
+            startActivity(intent);
         });
 
+
+
         btnLearn.setOnClickListener(v -> {
-            Toast.makeText(
-                    this,
-                    R.string.main_pending_route,
-                    Toast.LENGTH_SHORT
-            ).show();
+
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    UnitsActivity.class
+            );
+
+            startActivity(intent);
         });
+
 
         btnProgress.setOnClickListener(v -> {
             Toast.makeText(

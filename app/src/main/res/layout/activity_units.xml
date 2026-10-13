@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollMap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@color/yuki_background"
+    tools:context=".UnitsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutPath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Encabezado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back_yuki"
+                    android:contentDescription="@string/units_back" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/units_title"
+                        android:textColor="@color/yuki_primary"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/units_subtitle"
+                        android:textColor="@color/yuki_text_secondary"
+                        android:textSize="@dimen/text_body" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Unidad 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/units_unit1"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson1"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_marginTop="@dimen/space_large">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson1"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="start|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="1 · ¿Qué es programar?" />
+
+                <TextView
+                    android:id="@+id/txtStars1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+
+                <ImageView
+                    android:id="@+id/imgYuki"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/splash_yuki_description" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:rotation="-25"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson2"
+                android:layout_width="match_parent"
+                android:layout_height="108dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson2"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="end|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="2 · Mostrar información" />
+
+                <TextView
+                    android:id="@+id/txtStars2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+            </FrameLayout>
+
+            <!-- Unidad 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/units_unit2"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:rotation="25"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson3"
+                android:layout_width="match_parent"
+                android:layout_height="108dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson3"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="start|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="3 · Variables" />
+
+                <TextView
+                    android:id="@+id/txtStars3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:rotation="-25"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson4"
+                android:layout_width="match_parent"
+                android:layout_height="108dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson4"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="end|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="4 · Tipos de datos" />
+
+                <TextView
+                    android:id="@+id/txtStars4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+            </FrameLayout>
+
+            <!-- Unidad 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/units_unit3"
+                android:textColor="@color/yuki_primary"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:rotation="25"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson5"
+                android:layout_width="match_parent"
+                android:layout_height="108dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson5"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="start|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="5 · Operadores" />
+
+                <TextView
+                    android:id="@+id/txtStars5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:rotation="-25"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowLesson6"
+                android:layout_width="match_parent"
+                android:layout_height="108dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeLesson6"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="end|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_body"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="6 · Condicionales" />
+
+                <TextView
+                    android:id="@+id/txtStars6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/yuki_accent"
+                    android:textSize="@dimen/text_section" />
+            </FrameLayout>
+
+            <!-- Desafío final -->
+            <View
+                android:layout_width="4dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/yuki_secondary" />
+
+            <FrameLayout
+                android:id="@+id/rowFinalChallenge"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_marginTop="@dimen/space_small">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nodeFinalChallenge"
+                    android:layout_width="200dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="start|top"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_card"
+                    app:cornerRadius="@dimen/card_radius"
+                    tools:text="Desafío de Luna" />
+
+                <TextView
+                    android:id="@+id/txtFinalStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="24dp"
+                    android:textColor="@color/yuki_text_secondary"
+                    android:textSize="@dimen/text_secondary" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

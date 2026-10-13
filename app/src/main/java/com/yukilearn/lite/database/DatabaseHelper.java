@@ -1,6 +1,6 @@
 
 package com.yukilearn.lite.database;
-
+import com.yukilearn.lite.models.ProgresoLeccion;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -136,5 +136,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return 0;
     }
+
+
+    public ProgresoLeccion obtenerProgresoLeccion(int leccionId) {
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT mejor_puntaje, estrellas " +
+                        "FROM progreso_leccion WHERE leccion_id = ?",
+                new String[]{String.valueOf(leccionId)}
+        );
+
+        int mejorPuntaje = 0;
+        int estrellas = 0;
+
+        if (cursor.moveToFirst()) {
+            mejorPuntaje = cursor.getInt(0);
+            estrellas = cursor.getInt(1);
+        }
+
+        cursor.close();
+
+        return new ProgresoLeccion(leccionId, mejorPuntaje, estrellas);
+    }
+
 
 }
