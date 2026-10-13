@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@color/yuki_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/result_heading"
+            android:textColor="@color/yuki_primary"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgResultYuki"
+            android:layout_width="@dimen/yuki_large"
+            android:layout_height="@dimen/yuki_large"
+            android:layout_marginTop="@dimen/space_large"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/splash_yuki_description" />
+
+        <TextView
+            android:id="@+id/txtResultMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:gravity="center"
+            android:textColor="@color/yuki_text_primary"
+            android:textSize="@dimen/text_section"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_profile_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result_score_label"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/txtResultScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/yuki_primary"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtResultCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/txtResultStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:textColor="@color/yuki_accent"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/txtResultBest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_normal"
+                android:textColor="@color/yuki_text_secondary"
+                android:textSize="@dimen/text_body" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultXp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:background="@drawable/bg_main_hero"
+            android:gravity="center"
+            android:padding="@dimen/space_large"
+            android:textColor="@color/yuki_primary"
+            android:textSize="@dimen/text_section"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtResultUnlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal"
+            android:gravity="center"
+            android:textColor="@color/yuki_success"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResultContinue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="28dp"
+            android:text="@string/result_continue"
+            android:textColor="@color/yuki_on_primary"
+            android:textSize="@dimen/text_card"
+            app:backgroundTint="@color/yuki_primary"
+            app:cornerRadius="@dimen/button_radius" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResultRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_small"
+            android:text="@string/result_repeat"
+            android:textColor="@color/yuki_primary"
+            android:textSize="@dimen/text_card"
+            app:backgroundTint="@color/yuki_surface"
+            app:cornerRadius="@dimen/button_radius"
+            app:strokeColor="@color/yuki_primary"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

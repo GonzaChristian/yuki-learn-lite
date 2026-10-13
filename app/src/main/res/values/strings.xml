@@ -100,4 +100,24 @@
     <string name="quiz_finish">Cerrar práctica</string>
     <string name="quiz_summary">%1$d de %2$d respuestas correctas.\nPuntaje: %3$d%%\n\nPor ahora este resultado no se guarda. Conectaremos SQLite en ResultActivity.</string>
 
+
+    <!-- Resultados -->
+    <string name="result_heading">Resultado de tu práctica</string>
+    <string name="result_score_label">Tu puntaje</string>
+    <string name="result_score">%1$d%%</string>
+    <string name="result_correct">%1$d de %2$d respuestas correctas</string>
+    <string name="result_best">Mejor puntaje: %1$d%%</string>
+    <string name="result_xp">+%1$d XP obtenidos</string>
+
+    <string name="result_success">¡Muy bien! Superaste la lección.</string>
+    <string name="result_failed">¡Sigue practicando! Puedes mejorar.</string>
+    <string name="result_challenge_success">¡Superaste el Desafío de Luna!</string>
+
+    <string name="result_unlock_lesson">¡Desbloqueaste la siguiente lección!</string>
+    <string name="result_unlock_challenge">¡Desbloqueaste el Desafío de Luna!</string>
+
+    <string name="result_continue">Continuar</string>
+    <string name="result_repeat">Repetir práctica</string>
+    <string name="result_save_error">No se pudo guardar el resultado. Inténtalo nuevamente.</string>
+
 </resources>

@@ -149,6 +149,7 @@ public class LessonActivity extends AppCompatActivity {
             intent.putExtra("lessonId", leccionId);
 
             startActivity(intent);
+            finish();
         }
     }
 

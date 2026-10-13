@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AlertDialog;
@@ -415,27 +416,24 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+
     private void terminarPractica() {
 
-        int porcentaje = (aciertos * 100) / preguntas.length;
+        int leccionId = getIntent().getIntExtra("lessonId", -1);
 
-        String resumen = getString(
-                R.string.quiz_summary,
-                aciertos,
-                preguntas.length,
-                porcentaje
+        Intent intent = new Intent(
+                QuizActivity.this,
+                ResultActivity.class
         );
 
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.quiz_finished)
-                .setMessage(resumen)
-                .setCancelable(false)
-                .setPositiveButton(
-                        R.string.quiz_finish,
-                        (dialog, which) -> finish()
-                )
-                .show();
+        intent.putExtra("lessonId", leccionId);
+        intent.putExtra("aciertos", aciertos);
+        intent.putExtra("total", preguntas.length);
+
+        startActivity(intent);
+        finish();
     }
+
 
     private void confirmarSalida() {
 
