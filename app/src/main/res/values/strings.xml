@@ -65,4 +65,14 @@
     <string name="units_challenge_available">Disponible</string>
     <string name="units_challenge_completed">Superado</string>
 
+
+    <!-- Pantalla de lecciones -->
+    <string name="lesson_luna_description">Luna, tutora de programación</string>
+    <string name="lesson_luna_tutor">Luna te explica</string>
+    <string name="lesson_code_label">JAVA</string>
+    <string name="lesson_step_counter">%1$d / %2$d</string>
+    <string name="lesson_next">Siguiente</string>
+    <string name="lesson_start_quiz">Comenzar práctica</string>
+    <string name="lesson_quiz_pending">La práctica estará disponible en la siguiente fase.</string>
+
 </resources>

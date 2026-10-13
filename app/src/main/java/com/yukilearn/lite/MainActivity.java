@@ -71,15 +71,34 @@ public class MainActivity extends AppCompatActivity {
         btnProgress = findViewById(R.id.btnProgress);
 
 
+
         btnContinue.setOnClickListener(v -> {
 
-            Intent intent = new Intent(
-                    MainActivity.this,
-                    UnitsActivity.class
-            );
+            int siguienteId = dbHelper.obtenerSiguienteLeccionId();
+
+            Intent intent;
+
+            if (siguienteId >= 1 && siguienteId <= 6) {
+
+                intent = new Intent(
+                        MainActivity.this,
+                        LessonActivity.class
+                );
+
+                intent.putExtra("lessonId", siguienteId);
+
+            } else {
+
+                // Hasta implementar QuizActivity, se abre el mapa.
+                intent = new Intent(
+                        MainActivity.this,
+                        UnitsActivity.class
+                );
+            }
 
             startActivity(intent);
         });
+
 
 
 

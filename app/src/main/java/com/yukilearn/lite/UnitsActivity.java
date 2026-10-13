@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -273,6 +274,7 @@ public class UnitsActivity extends AppCompatActivity {
         return ContextCompat.getColor(this, colorId);
     }
 
+
     private void abrirLeccion(int leccionId) {
 
         if (leccionId > 1) {
@@ -292,9 +294,9 @@ public class UnitsActivity extends AppCompatActivity {
             }
         }
 
-        // Temporal: las pantallas de lecciones aún no existen.
         if (leccionId == 7) {
 
+            // El Desafío de Luna se conectará con QuizActivity.
             Toast.makeText(
                     this,
                     R.string.units_challenge_pending,
@@ -303,13 +305,17 @@ public class UnitsActivity extends AppCompatActivity {
 
         } else {
 
-            Toast.makeText(
-                    this,
-                    R.string.units_lesson_pending,
-                    Toast.LENGTH_SHORT
-            ).show();
+            Intent intent = new Intent(
+                    UnitsActivity.this,
+                    LessonActivity.class
+            );
+
+            intent.putExtra("lessonId", leccionId);
+
+            startActivity(intent);
         }
     }
+
 
     @Override
     protected void onDestroy() {

@@ -27,6 +27,11 @@
             android:exported="false" />
 
         <activity
+            android:name=".LessonActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
 
