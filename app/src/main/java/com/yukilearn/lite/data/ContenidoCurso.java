@@ -1,7 +1,7 @@
 package com.yukilearn.lite.data;
 
 import com.yukilearn.lite.models.PasoLeccion;
-
+import com.yukilearn.lite.models.Pregunta;
 public class ContenidoCurso {
 
     public static String obtenerTitulo(int leccionId) {
@@ -191,4 +191,409 @@ public class ContenidoCurso {
                 return new PasoLeccion[0];
         }
     }
+
+    public static Pregunta[] obtenerPreguntas(int leccionId) {
+
+        switch (leccionId) {
+
+            case 1:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Qué significa programar?",
+                                new String[]{
+                                        "Dibujar pantallas",
+                                        "Crear instrucciones para una computadora",
+                                        "Encender una computadora",
+                                        "Instalar aplicaciones"
+                                },
+                                1,
+                                "Programar consiste en crear instrucciones para realizar tareas."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Cuál es un ejemplo de instrucción?",
+                                new String[]{
+                                        "Mostrar un mensaje",
+                                        "El color azul",
+                                        "Una fotografía",
+                                        "El tamaño de una pantalla"
+                                },
+                                0,
+                                "Mostrar un mensaje es una acción que podemos indicar a la computadora."
+                        ),
+
+                        Pregunta.multiple(
+                                "¿Qué tareas puede realizar un programa?",
+                                new String[]{
+                                        "Mostrar mensajes",
+                                        "Sumar números",
+                                        "Dormir físicamente",
+                                        "Guardar información"
+                                },
+                                new int[]{0, 1, 3},
+                                "Un programa puede mostrar, calcular y guardar información."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Cómo se llama una secuencia de pasos ordenados?",
+                                "algoritmo",
+                                "Un algoritmo organiza los pasos necesarios para resolver un problema."
+                        ),
+
+                        Pregunta.unica(
+                                "¿Por qué importa el orden de un algoritmo?",
+                                new String[]{
+                                        "Porque los pasos deben seguir una secuencia lógica",
+                                        "Porque todos los pasos son iguales",
+                                        "Porque elimina la necesidad de instrucciones",
+                                        "Porque cambia el color del programa"
+                                },
+                                0,
+                                "El orden ayuda a obtener el resultado esperado."
+                        )
+                };
+
+            case 2:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Qué instrucción muestra información en Java?",
+                                new String[]{
+                                        "mostrar('Hola');",
+                                        "System.out.println(\"Hola\");",
+                                        "print Hola;",
+                                        "System.println = Hola;"
+                                },
+                                1,
+                                "System.out.println() permite mostrar información en la consola."
+                        ),
+
+                        Pregunta.texto(
+                                "Completa: System.out._____(\"Hola\");",
+                                "println",
+                                "La palabra que falta es println."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué muestra System.out.println(5 + 3);?",
+                                new String[]{"5", "53", "8", "3"},
+                                2,
+                                "Java realiza la suma antes de mostrar el resultado: 8."
+                        ),
+
+                        Pregunta.multiple(
+                                "Selecciona las instrucciones válidas en Java.",
+                                new String[]{
+                                        "System.out.println(\"Hola\");",
+                                        "System.out.println(10);",
+                                        "print(\"Hola\");",
+                                        "System.out.println Hola;"
+                                },
+                                new int[]{0, 1},
+                                "Las dos primeras utilizan correctamente System.out.println()."
+                        ),
+
+                        Pregunta.unica(
+                                "¿Cómo escribimos un texto en Java?",
+                                new String[]{
+                                        "Sin símbolos",
+                                        "Entre paréntesis solamente",
+                                        "Entre comillas dobles",
+                                        "Después del símbolo +"
+                                },
+                                2,
+                                "Los textos literales se escriben entre comillas dobles."
+                        )
+                };
+
+            case 3:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "En int edad = 18;, ¿cuál es el nombre?",
+                                new String[]{"int", "edad", "18", "="},
+                                1,
+                                "edad es el nombre de la variable."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué valor tiene edad en int edad = 18;?",
+                                "18",
+                                "La variable edad guarda el número 18."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué instrucción cambia puntos a 20?",
+                                new String[]{
+                                        "puntos == 20;",
+                                        "puntos = 20;",
+                                        "20 = puntos;",
+                                        "int = 20;"
+                                },
+                                1,
+                                "El símbolo = permite asignar un nuevo valor."
+                        ),
+
+                        Pregunta.multiple(
+                                "Selecciona declaraciones válidas de variables.",
+                                new String[]{
+                                        "int edad = 18;",
+                                        "String nombre = \"Yuki\";",
+                                        "edad + 2;",
+                                        "\"Hola\";"
+                                },
+                                new int[]{0, 1},
+                                "Las dos primeras declaran variables con tipo, nombre y valor."
+                        ),
+
+                        Pregunta.unica(
+                                "Si puntos vale 10 y luego se asigna 20, ¿cuánto vale?",
+                                new String[]{"10", "30", "20", "0"},
+                                2,
+                                "La segunda asignación reemplaza el valor anterior."
+                        )
+                };
+
+            case 4:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Qué tipo de dato guarda números enteros?",
+                                new String[]{"String", "double", "int", "boolean"},
+                                2,
+                                "int almacena números enteros."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué tipo utilizarías para guardar 4.5?",
+                                new String[]{"boolean", "int", "String", "double"},
+                                3,
+                                "double permite almacenar números decimales."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué tipo de dato se utiliza para guardar texto?",
+                                "String",
+                                "String almacena cadenas de texto."
+                        ),
+
+                        Pregunta.multiple(
+                                "Selecciona declaraciones correctas.",
+                                new String[]{
+                                        "int edad = 18;",
+                                        "boolean activo = true;",
+                                        "double precio = 4.5;",
+                                        "int edad = \"Hola\";"
+                                },
+                                new int[]{0, 1, 2},
+                                "La última es incorrecta: int no almacena textos."
+                        ),
+
+                        Pregunta.unica(
+                                "¿Qué valores admite boolean?",
+                                new String[]{
+                                        "1 y 2 solamente",
+                                        "true y false",
+                                        "Textos",
+                                        "Cualquier número decimal"
+                                },
+                                1,
+                                "boolean representa verdadero o falso."
+                        )
+                };
+
+            case 5:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Cuál es el resultado de 4 * 2?",
+                                new String[]{"6", "8", "2", "42"},
+                                1,
+                                "El símbolo * representa multiplicación."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué devuelve la comparación 7 > 4?",
+                                new String[]{"false", "7", "true", "4"},
+                                2,
+                                "La comparación es verdadera porque 7 es mayor que 4."
+                        ),
+
+                        Pregunta.multiple(
+                                "Selecciona operadores de comparación.",
+                                new String[]{">=", "==", "!=", "="},
+                                new int[]{0, 1, 2},
+                                "= asigna valores; los otros tres comparan."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué operador compara si dos valores son iguales?",
+                                "==",
+                                "== compara igualdad; = asigna un valor."
+                        ),
+
+                        Pregunta.unica(
+                                "¿Cuál es la diferencia entre = y ==?",
+                                new String[]{
+                                        "Ambos sirven para sumar",
+                                        "= compara y == asigna",
+                                        "Ambos significan lo mismo",
+                                        "= asigna y == compara"
+                                },
+                                3,
+                                "La asignación y la comparación tienen funciones diferentes."
+                        )
+                };
+
+            case 6:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Cuándo se ejecuta el bloque de un if?",
+                                new String[]{
+                                        "Cuando su condición es verdadera",
+                                        "Siempre",
+                                        "Cuando su condición es falsa",
+                                        "Solo al cerrar el programa"
+                                },
+                                0,
+                                "if ejecuta su bloque cuando la condición es verdadera."
+                        ),
+
+                        Pregunta.lista(
+                                "Si nota = 8 y la condición es nota >= 11, ¿qué rama se ejecuta?",
+                                new String[]{"if", "else", "Ambas", "Ninguna"},
+                                1,
+                                "La condición es falsa, por eso se ejecuta else."
+                        ),
+
+                        Pregunta.multiple(
+                                "Selecciona afirmaciones correctas sobre if y else.",
+                                new String[]{
+                                        "if evalúa una condición",
+                                        "else se ejecuta cuando el if es falso",
+                                        "else siempre se ejecuta",
+                                        "if puede utilizarse sin else"
+                                },
+                                new int[]{0, 1, 3},
+                                "else es opcional y representa el camino alternativo."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué palabra se utiliza para el bloque alternativo?",
+                                "else",
+                                "else permite ejecutar instrucciones cuando el if es falso."
+                        ),
+
+                        Pregunta.unica(
+                                "Si puntos = 7 y usamos if (puntos > 5), ¿qué ocurre?",
+                                new String[]{
+                                        "La condición es falsa",
+                                        "La condición es verdadera",
+                                        "El programa siempre falla",
+                                        "puntos cambia a 5"
+                                },
+                                1,
+                                "7 > 5 es verdadero, por eso se ejecuta el bloque if."
+                        )
+                };
+
+            case 7:
+                return new Pregunta[]{
+
+                        Pregunta.unica(
+                                "¿Qué es un algoritmo?",
+                                new String[]{
+                                        "Un tipo de dato",
+                                        "Un conjunto ordenado de pasos",
+                                        "Un color de pantalla",
+                                        "Una aplicación instalada"
+                                },
+                                1,
+                                "Un algoritmo es una secuencia de pasos para resolver un problema."
+                        ),
+
+                        Pregunta.multiple(
+                                "¿Cuáles son declaraciones válidas de variables?",
+                                new String[]{
+                                        "int puntos = 10;",
+                                        "String nombre = \"Luna\";",
+                                        "boolean listo = true;",
+                                        "int edad = \"Hola\";"
+                                },
+                                new int[]{0, 1, 2},
+                                "El tipo debe corresponder con el valor guardado."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué muestra System.out.println(\"Hola\");?",
+                                new String[]{"Hola", "\"Hola\"", "0", "Error"},
+                                0,
+                                "println muestra el contenido del texto."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué tipo se utiliza para guardar enteros?",
+                                "int",
+                                "int representa números enteros."
+                        ),
+
+                        Pregunta.unica(
+                                "¿Cuál es el resultado de 5 + 3?",
+                                new String[]{"53", "2", "8", "15"},
+                                2,
+                                "El operador + realiza la suma de dos números."
+                        ),
+
+                        Pregunta.multiple(
+                                "¿Cuáles son operadores de comparación?",
+                                new String[]{"<", "==", "!=", "="},
+                                new int[]{0, 1, 2},
+                                "El símbolo = asigna; los demás comparan."
+                        ),
+
+                        Pregunta.lista(
+                                "¿Qué valor tiene boolean aprobado = false;?",
+                                new String[]{"true", "false", "0.5", "\"false\""},
+                                1,
+                                "La variable guarda el valor booleano false."
+                        ),
+
+                        Pregunta.texto(
+                                "¿Qué palabra permite evaluar una condición en Java?",
+                                "if",
+                                "La estructura if evalúa una condición."
+                        ),
+
+                        Pregunta.unica(
+                                "Si edad = 16 y la condición es edad >= 18, ¿qué sucede?",
+                                new String[]{
+                                        "La condición es verdadera",
+                                        "Se ejecutan las dos ramas",
+                                        "La condición es falsa",
+                                        "edad cambia automáticamente"
+                                },
+                                2,
+                                "16 no es mayor o igual que 18; se ejecutaría else si existe."
+                        ),
+
+                        Pregunta.multiple(
+                                "¿Qué acciones puede realizar un programa?",
+                                new String[]{
+                                        "Mostrar mensajes",
+                                        "Realizar cálculos",
+                                        "Guardar información",
+                                        "Dormir físicamente"
+                                },
+                                new int[]{0, 1, 2},
+                                "Un programa puede procesar y guardar información."
+                        )
+                };
+
+            default:
+                return new Pregunta[0];
+        }
+    }
+
 }

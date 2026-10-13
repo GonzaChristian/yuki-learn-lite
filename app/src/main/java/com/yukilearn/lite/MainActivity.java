@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         btnContinue.setOnClickListener(v -> {
 
             int siguienteId = dbHelper.obtenerSiguienteLeccionId();
@@ -80,20 +81,17 @@ public class MainActivity extends AppCompatActivity {
 
             if (siguienteId >= 1 && siguienteId <= 6) {
 
-                intent = new Intent(
-                        MainActivity.this,
-                        LessonActivity.class
-                );
-
+                intent = new Intent(this, LessonActivity.class);
                 intent.putExtra("lessonId", siguienteId);
+
+            } else if (siguienteId == 7) {
+
+                intent = new Intent(this, QuizActivity.class);
+                intent.putExtra("lessonId", 7);
 
             } else {
 
-                // Hasta implementar QuizActivity, se abre el mapa.
-                intent = new Intent(
-                        MainActivity.this,
-                        UnitsActivity.class
-                );
+                intent = new Intent(this, UnitsActivity.class);
             }
 
             startActivity(intent);

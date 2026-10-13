@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
@@ -128,6 +129,7 @@ public class LessonActivity extends AppCompatActivity {
         scrollLesson.post(() -> scrollLesson.scrollTo(0, 0));
     }
 
+
     private void siguientePaso() {
 
         if (pasoActual < pasos.length - 1) {
@@ -137,12 +139,17 @@ public class LessonActivity extends AppCompatActivity {
 
         } else {
 
-            // Aquí abriremos QuizActivity en la siguiente fase.
-            Toast.makeText(
-                    this,
-                    R.string.lesson_quiz_pending,
-                    Toast.LENGTH_SHORT
-            ).show();
+            int leccionId = getIntent().getIntExtra("lessonId", -1);
+
+            Intent intent = new Intent(
+                    LessonActivity.this,
+                    QuizActivity.class
+            );
+
+            intent.putExtra("lessonId", leccionId);
+
+            startActivity(intent);
         }
     }
+
 }

@@ -75,4 +75,29 @@
     <string name="lesson_start_quiz">Comenzar práctica</string>
     <string name="lesson_quiz_pending">La práctica estará disponible en la siguiente fase.</string>
 
+
+    <!-- Pantalla Quiz -->
+    <string name="quiz_exit">Salir de la práctica</string>
+    <string name="quiz_exit_title">¿Salir de la práctica?</string>
+    <string name="quiz_exit_message">Perderás las respuestas de este intento.</string>
+    <string name="quiz_stay">Seguir practicando</string>
+
+    <string name="quiz_question_counter">%1$d / %2$d</string>
+    <string name="quiz_single_instruction">Selecciona una respuesta.</string>
+    <string name="quiz_multiple_instruction">Marca todas las respuestas correctas.</string>
+    <string name="quiz_list_instruction">Selecciona una opción de la lista.</string>
+    <string name="quiz_text_instruction">Escribe tu respuesta.</string>
+
+    <string name="quiz_select_placeholder">Selecciona una opción...</string>
+    <string name="quiz_answer_hint">Escribe aquí...</string>
+    <string name="quiz_answer_required">Debes responder antes de continuar.</string>
+
+    <string name="quiz_check">Comprobar</string>
+    <string name="quiz_continue">Continuar</string>
+    <string name="quiz_correct">¡Correcto!</string>
+    <string name="quiz_incorrect">No es correcto.</string>
+    <string name="quiz_finished">Práctica terminada</string>
+    <string name="quiz_finish">Cerrar práctica</string>
+    <string name="quiz_summary">%1$d de %2$d respuestas correctas.\nPuntaje: %3$d%%\n\nPor ahora este resultado no se guarda. Conectaremos SQLite en ResultActivity.</string>
+
 </resources>

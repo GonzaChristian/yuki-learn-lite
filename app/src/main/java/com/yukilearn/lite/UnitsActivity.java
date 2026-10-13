@@ -294,14 +294,17 @@ public class UnitsActivity extends AppCompatActivity {
             }
         }
 
+
         if (leccionId == 7) {
 
-            // El Desafío de Luna se conectará con QuizActivity.
-            Toast.makeText(
-                    this,
-                    R.string.units_challenge_pending,
-                    Toast.LENGTH_SHORT
-            ).show();
+            Intent intent = new Intent(
+                    UnitsActivity.this,
+                    QuizActivity.class
+            );
+
+            intent.putExtra("lessonId", 7);
+
+            startActivity(intent);
 
         } else {
 
@@ -314,6 +317,7 @@ public class UnitsActivity extends AppCompatActivity {
 
             startActivity(intent);
         }
+
     }
 
 
