@@ -17,4 +17,34 @@
     <string name="profile_name_error">Ingresa tu nombre para continuar.</string>
     <string name="profile_save_error">No se pudo guardar el perfil.</string>
 
+
+    <!-- Pantalla principal -->
+    <string name="main_greeting_preview">¡Hola!</string>
+    <string name="main_level_preview">Nivel 1</string>
+    <string name="main_yuki_name">Yuki</string>
+    <string name="main_yuki_message">¿Seguimos aprendiendo?</string>
+    <string name="main_experience">Tu experiencia</string>
+    <string name="main_xp_preview">0 XP</string>
+    <string name="main_xp_next_preview">100 XP para el Nivel 2</string>
+    <string name="main_next_label">TU SIGUIENTE LECCIÓN</string>
+    <string name="main_next_preview">Lección 1 · ¿Qué es programar?</string>
+
+    <string name="main_continue">Continuar</string>
+    <string name="main_challenge_button">Continuar con el Desafío de Luna</string>
+    <string name="main_completed_button">Ver ruta completada</string>
+    <string name="main_learn">Aprender</string>
+    <string name="main_progress">Mi progreso</string>
+
+    <string name="main_greeting">¡Hola, %1$s!</string>
+    <string name="main_level">Nivel %1$d</string>
+    <string name="main_xp_total">%1$d XP</string>
+    <string name="main_xp_remaining">%1$d XP para el Nivel %2$d</string>
+    <string name="main_max_level">Nivel máximo</string>
+    <string name="main_lesson_format">Lección %1$d · %2$s</string>
+    <string name="main_challenge_title">Desafío de Luna</string>
+    <string name="main_course_completed">¡Completaste Yuki Learn Lite!</string>
+
+    <string name="main_pending_route">La ruta de aprendizaje estará disponible próximamente.</string>
+    <string name="main_pending_progress">La pantalla de progreso estará disponible próximamente.</string>
+
 </resources>

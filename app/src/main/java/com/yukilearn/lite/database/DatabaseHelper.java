@@ -70,4 +70,71 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return resultado != -1;
     }
+
+
+    public String obtenerNombre() {
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT nombre FROM perfil WHERE id = 1",
+                null
+        );
+
+        String nombre = "Estudiante";
+
+        if (cursor.moveToFirst()) {
+            nombre = cursor.getString(0);
+        }
+
+        cursor.close();
+        return nombre;
+    }
+
+    public int obtenerXp() {
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT xp FROM perfil WHERE id = 1",
+                null
+        );
+
+        int xp = 0;
+
+        if (cursor.moveToFirst()) {
+            xp = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return xp;
+    }
+
+    public int obtenerSiguienteLeccionId() {
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        for (int i = 1; i <= 7; i++) {
+
+            Cursor cursor = db.rawQuery(
+                    "SELECT mejor_puntaje FROM progreso_leccion WHERE leccion_id = ?",
+                    new String[]{String.valueOf(i)}
+            );
+
+            int mejorPuntaje = 0;
+
+            if (cursor.moveToFirst()) {
+                mejorPuntaje = cursor.getInt(0);
+            }
+
+            cursor.close();
+
+            if (mejorPuntaje < 50) {
+                return i;
+            }
+        }
+
+        return 0;
+    }
+
 }
