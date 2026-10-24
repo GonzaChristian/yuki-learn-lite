@@ -123,8 +123,9 @@ public class QuizActivity extends AppCompatActivity {
         boolean estabaComprobada = false;
 
         if (savedInstanceState != null) {
-            preguntaActual = savedInstanceState.getInt("preguntaActual");
-            aciertos = savedInstanceState.getInt("aciertos");
+            int preguntaGuardada = savedInstanceState.getInt("preguntaActual");
+            preguntaActual = Math.max(0, Math.min(preguntaGuardada, preguntas.length - 1));
+            aciertos = Math.max(0, Math.min(savedInstanceState.getInt("aciertos"), preguntas.length));
             estabaComprobada = savedInstanceState.getBoolean("comprobada");
             ultimaCorrecta = savedInstanceState.getBoolean("ultimaCorrecta");
         }
@@ -452,11 +453,46 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restaurar las respuestas después de que Android restaura las vistas.
+        int radioSeleccionado = savedInstanceState.getInt("radioSeleccionado", View.NO_ID);
+        if (radioSeleccionado != View.NO_ID) {
+            groupRadio.check(radioSeleccionado);
+        }
+
+        boolean[] checksGuardados = savedInstanceState.getBooleanArray("checksSeleccionados");
+        if (checksGuardados != null) {
+            for (int i = 0; i < checks.length && i < checksGuardados.length; i++) {
+                checks[i].setChecked(checksGuardados[i]);
+            }
+        }
+
+        int listaSeleccionada = savedInstanceState.getInt("listaSeleccionada", 0);
+        if (spinnerAnswer.getAdapter() != null &&
+                listaSeleccionada >= 0 && listaSeleccionada < spinnerAnswer.getCount()) {
+            spinnerAnswer.setSelection(listaSeleccionada);
+        }
+
+        edtAnswer.setText(savedInstanceState.getString("respuestaTexto", ""));
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt("preguntaActual", preguntaActual);
         outState.putInt("aciertos", aciertos);
         outState.putBoolean("comprobada", comprobada);
         outState.putBoolean("ultimaCorrecta", ultimaCorrecta);
+
+        outState.putInt("radioSeleccionado", groupRadio.getCheckedRadioButtonId());
+        boolean[] checksSeleccionados = new boolean[checks.length];
+        for (int i = 0; i < checks.length; i++) {
+            checksSeleccionados[i] = checks[i].isChecked();
+        }
+        outState.putBooleanArray("checksSeleccionados", checksSeleccionados);
+        outState.putInt("listaSeleccionada", spinnerAnswer.getSelectedItemPosition());
+        outState.putString("respuestaTexto", edtAnswer.getText().toString());
 
         super.onSaveInstanceState(outState);
     }

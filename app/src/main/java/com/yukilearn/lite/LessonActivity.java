@@ -51,6 +51,17 @@ public class LessonActivity extends AppCompatActivity {
 
         pasos = ContenidoCurso.obtenerPasos(leccionId);
 
+        if (pasos.length == 0) {
+            finish();
+            return;
+        }
+
+        // Conservar la pantalla actual cuando Android recrea la Activity.
+        if (savedInstanceState != null) {
+            int pasoGuardado = savedInstanceState.getInt("pasoActual", 0);
+            pasoActual = Math.max(0, Math.min(pasoGuardado, pasos.length - 1));
+        }
+
         txtLessonTitle = findViewById(R.id.txtLessonTitle);
         txtStepCounter = findViewById(R.id.txtStepCounter);
         txtExplanation = findViewById(R.id.txtExplanation);
@@ -151,6 +162,12 @@ public class LessonActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt("pasoActual", pasoActual);
+        super.onSaveInstanceState(outState);
     }
 
 }
